@@ -26,6 +26,7 @@ def load_frames(path):
     vc = cv2.VideoCapture(path)
     while True:
         status, frame = vc.read()
+        if not status: exit()
 
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
